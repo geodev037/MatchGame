@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MatchGame"
         mc:Ignorable="d"
-        Title="Find all of the matching animals" Height="450" Width="604">
+        Title="Jogo da memoria" Height="450" Width="604">
     <Grid x:Name="mainGrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="153*"/>
@@ -19,24 +19,85 @@
             <RowDefinition Height="71*"/>
             <RowDefinition Height="71*"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.531,0.549" Foreground="Black" FontSize="30" FontFamily="Yu Gothic UI" Grid.Row="1"><Run Language="pt-br" Text="?"/></TextBlock>
-        <TextBlock Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.531,0.549" Foreground="Black" FontSize="30" FontFamily="Yu Gothic UI"><Run Language="pt-br" Text="?"/></TextBlock>
-        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.531,0.549" Foreground="Black" FontSize="30" FontFamily="Yu Gothic UI"><Run Language="pt-br" Text="?"/></TextBlock>
-        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.531,0.549" Foreground="Black" FontSize="30" FontFamily="Yu Gothic UI" Grid.Row="1"><Run Language="pt-br" Text="?"/></TextBlock>
-        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.531,0.549" Foreground="Black" FontSize="30" FontFamily="Yu Gothic UI" Grid.Row="2"><Run Language="pt-br" Text="?"/></TextBlock>
-        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.531,0.549" Foreground="Black" FontSize="30" FontFamily="Yu Gothic UI" Grid.Row="3"><Run Language="pt-br" Text="?"/></TextBlock>
-        <TextBlock Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.531,0.549" Foreground="Black" FontSize="30" FontFamily="Yu Gothic UI" Margin="10,0,0,0"><Run Language="pt-br"/></TextBlock>
-        <TextBlock Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.531,0.549" Foreground="Black" FontSize="30" FontFamily="Yu Gothic UI" Margin="0,34,0,0" Grid.RowSpan="2"><Run Language="pt-br" Text="?"/><LineBreak/><Run Language="pt-br"/></TextBlock>
-        <TextBlock Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.531,0.549" Foreground="Black" FontSize="30" FontFamily="Yu Gothic UI" Grid.Row="1"><Run Language="pt-br" Text="?"/></TextBlock>
-        <TextBlock Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" Foreground="Black" FontSize="30" FontFamily="Yu Gothic UI" Grid.Row="2"><Run Language="pt-br" Text="?"/></TextBlock>
-        <TextBlock Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.531,0.549" Foreground="Black" FontSize="30" FontFamily="Yu Gothic UI" Grid.Row="3"><Run Language="pt-br" Text="?"/></TextBlock>
-        <TextBlock Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.531,0.549" Foreground="Black" FontSize="30" FontFamily="Yu Gothic UI" Grid.Row="2"><Run Language="pt-br" Text="?"/></TextBlock>
-        <TextBlock Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.531,0.549" Foreground="Black" FontSize="30" FontFamily="Yu Gothic UI" Grid.Row="3" Margin="0,34,0,0"><Run Language="pt-br" Text="?"/><LineBreak/><Run Language="pt-br"/></TextBlock>
-        <TextBlock Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" Foreground="Black" FontSize="30" FontFamily="Yu Gothic UI" Grid.Row="2"><Run Language="pt-br" Text="?"/></TextBlock>
-        <TextBlock Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.531,0.549" Foreground="Black" FontSize="30" FontFamily="Yu Gothic UI" Grid.Row="3"><Run Language="pt-br" Text="?"/></TextBlock>
-        <TextBlock Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.531,0.549" Foreground="Black" FontSize="30" FontFamily="Yu Gothic UI" Grid.Row="1"><Run Language="pt-br" Text="?"/></TextBlock>
-        <TextBlock Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="0.531,0.549" Foreground="Black" FontSize="30" FontFamily="Yu Gothic UI" Margin="67,0,0,0"><Run Language="pt-br" Text="?"/></TextBlock>
+
+        <TextBlock Grid.Column="0" Grid.Row="0"
+                   HorizontalAlignment="Center" VerticalAlignment="Center"
+                   Foreground="Black" FontSize="30" FontFamily="Yu Gothic UI"
+                   MouseDown="TextBlock_MouseDown"><Run Language="pt-br" Text="?"/></TextBlock>
+
+        <TextBlock Grid.Column="1" Grid.Row="0"
+                   HorizontalAlignment="Center" VerticalAlignment="Center"
+                   Foreground="Black" FontSize="30" FontFamily="Yu Gothic UI"
+                   MouseDown="TextBlock_MouseDown"><Run Language="pt-br" Text="?"/></TextBlock>
+
+        <TextBlock Grid.Column="2" Grid.Row="0"
+                   HorizontalAlignment="Center" VerticalAlignment="Center"
+                   Foreground="Black" FontSize="30" FontFamily="Yu Gothic UI"
+                   MouseDown="TextBlock_MouseDown"><Run Language="pt-br" Text="?"/></TextBlock>
+
+        <TextBlock Grid.Column="3" Grid.Row="0"
+                   HorizontalAlignment="Center" VerticalAlignment="Center"
+                   Foreground="Black" FontSize="30" FontFamily="Yu Gothic UI"
+                   MouseDown="TextBlock_MouseDown"><Run Language="pt-br" Text="?"/></TextBlock>
+
+        <TextBlock Grid.Column="0" Grid.Row="1"
+                   HorizontalAlignment="Center" VerticalAlignment="Center"
+                   Foreground="Black" FontSize="30" FontFamily="Yu Gothic UI"
+                   MouseDown="TextBlock_MouseDown"><Run Language="pt-br" Text="?"/></TextBlock>
+
+        <TextBlock Grid.Column="1" Grid.Row="1"
+                   HorizontalAlignment="Center" VerticalAlignment="Center"
+                   Foreground="Black" FontSize="30" FontFamily="Yu Gothic UI"
+                   MouseDown="TextBlock_MouseDown"><Run Language="pt-br" Text="?"/></TextBlock>
+
+        <TextBlock Grid.Column="2" Grid.Row="1"
+                   HorizontalAlignment="Center" VerticalAlignment="Center"
+                   Foreground="Black" FontSize="30" FontFamily="Yu Gothic UI"
+                   MouseDown="TextBlock_MouseDown"><Run Language="pt-br" Text="?"/></TextBlock>
+
+        <TextBlock Grid.Column="3" Grid.Row="1"
+                   HorizontalAlignment="Center" VerticalAlignment="Center"
+                   Foreground="Black" FontSize="30" FontFamily="Yu Gothic UI"
+                   MouseDown="TextBlock_MouseDown"><Run Language="pt-br" Text="?"/></TextBlock>
+
+        <TextBlock Grid.Column="0" Grid.Row="2"
+                   HorizontalAlignment="Center" VerticalAlignment="Center"
+                   Foreground="Black" FontSize="30" FontFamily="Yu Gothic UI"
+                   MouseDown="TextBlock_MouseDown"><Run Language="pt-br" Text="?"/></TextBlock>
+
+        <TextBlock Grid.Column="1" Grid.Row="2"
+                   HorizontalAlignment="Center" VerticalAlignment="Center"
+                   Foreground="Black" FontSize="30" FontFamily="Yu Gothic UI"
+                   MouseDown="TextBlock_MouseDown"><Run Language="pt-br" Text="?"/></TextBlock>
+
+        <TextBlock Grid.Column="2" Grid.Row="2"
+                   HorizontalAlignment="Center" VerticalAlignment="Center"
+                   Foreground="Black" FontSize="30" FontFamily="Yu Gothic UI"
+                   MouseDown="TextBlock_MouseDown"><Run Language="pt-br" Text="?"/></TextBlock>
+
+        <TextBlock Grid.Column="3" Grid.Row="2"
+                   HorizontalAlignment="Center" VerticalAlignment="Center"
+                   Foreground="Black" FontSize="30" FontFamily="Yu Gothic UI"
+                   MouseDown="TextBlock_MouseDown"><Run Language="pt-br" Text="?"/></TextBlock>
+
+        <TextBlock Grid.Column="0" Grid.Row="3"
+                   HorizontalAlignment="Center" VerticalAlignment="Center"
+                   Foreground="Black" FontSize="30" FontFamily="Yu Gothic UI"
+                   MouseDown="TextBlock_MouseDown"><Run Language="pt-br" Text="?"/></TextBlock>
+
+        <TextBlock Grid.Column="1" Grid.Row="3"
+                   HorizontalAlignment="Center" VerticalAlignment="Center"
+                   Foreground="Black" FontSize="30" FontFamily="Yu Gothic UI"
+                   MouseDown="TextBlock_MouseDown"><Run Language="pt-br" Text="?"/></TextBlock>
+
+        <TextBlock Grid.Column="2" Grid.Row="3"
+                   HorizontalAlignment="Center" VerticalAlignment="Center"
+                   Foreground="Black" FontSize="30" FontFamily="Yu Gothic UI"
+                   MouseDown="TextBlock_MouseDown"><Run Language="pt-br" Text="?"/></TextBlock>
+
+        <TextBlock Grid.Column="3" Grid.Row="3"
+                   HorizontalAlignment="Center" VerticalAlignment="Center"
+                   Foreground="Black" FontSize="30" FontFamily="Yu Gothic UI"
+                   MouseDown="TextBlock_MouseDown"><Run Language="pt-br" Text="?"/></TextBlock>
     </Grid>
-
-
 </Window>
