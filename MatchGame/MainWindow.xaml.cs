@@ -43,14 +43,14 @@ namespace MatchGame
                 textBlock.MouseDown += TextBlock_MouseDown; // Adiciona o evento MouseDown a cada TextBlock
             }
         }
-
+        
         private async void TextBlock_MouseDown(object sender, MouseButtonEventArgs e)
         {
             TextBlock textBlock = sender as TextBlock;
             int index = textBlocks.IndexOf(textBlock);
 
             // Verifica se o emoji já foi encontrado ou se já estão duas imagens reveladas
-            if (textBlock.Text != "?" || revealedIndexes.Count >= 2)
+            if (textBlock.Text != "?" || revealedIndexes.Contains(index) || revealedIndexes.Count >= 2)
                 return;
 
             textBlock.Text = animalEmoji[index];
